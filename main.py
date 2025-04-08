@@ -5,6 +5,11 @@ from collections import OrderedDict
 from datetime import datetime
 import config
 import time
+import os
+
+# 确保 output 文件夹存在
+if not os.path.exists('output'):
+    os.makedirs('output')
 
 # 日志记录。
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s',
@@ -177,10 +182,11 @@ def updateChannelUrlsM3U(channels, template_channels):
             if announcement['name'] is None:
                 announcement['name'] = current_date
 
-    with open("live_ipv4.m3u", "w", encoding="utf-8") as f_m3u_ipv4, \
-            open("live_ipv4.txt", "w", encoding="utf-8") as f_txt_ipv4, \
-            open("live_ipv6.m3u", "w", encoding="utf-8") as f_m3u_ipv6, \
-            open("live_ipv6.txt", "w", encoding="utf-8") as f_txt_ipv6:
+    output_path = 'output'
+    with open(os.path.join(output_path, "live_ipv4.m3u"), "w", encoding="utf-8") as f_m3u_ipv4, \
+            open(os.path.join(output_path, "live_ipv4.txt"), "w", encoding="utf-8") as f_txt_ipv4, \
+            open(os.path.join(output_path, "live_ipv6.m3u"), "w", encoding="utf-8") as f_m3u_ipv6, \
+            open(os.path.join(output_path, "live_ipv6.txt"), "w", encoding="utf-8") as f_txt_ipv6:
 
         f_m3u_ipv4.write(f"""#EXTM3U x-tvg-url={",".join(f'"{epg_url}"' for epg_url in config.epg_urls)}\n""")
         f_m3u_ipv6.write(f"""#EXTM3U x-tvg-url={",".join(f'"{epg_url}"' for epg_url in config.epg_urls)}\n""")
