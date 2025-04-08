@@ -333,4 +333,12 @@ def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url, respons
     if not tvg_name:
         tvg_name = channel_name
     f_m3u.write(f"#EXTINF:-1 tvg-id=\"{tvg_id}\" tvg-name=\"{tvg_name}\" tvg-logo=\"{logo_url}\" group-title=\"{category}\" tvg-response-time=\"{response_time:.2f}\",{channel_name}\n")
-    f_m3u.write(new_url + "\n
+    f_m3u.write(new_url + "\n")
+    f_txt.write(f"{channel_name},{new_url}\n")
+
+if __name__ == "__main__":
+    template_file = "template.txt"  # 请替换为实际的模板文件路径
+    matched_channels, template_channels = filter_source_urls(template_file)
+    updateChannelUrlsM3U(matched_channels, template_channels)
+    logging.info("文件生成完成！")
+    
