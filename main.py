@@ -2,6 +2,10 @@ import os
 from datetime import datetime
 import requests
 from ipaddress import ip_address
+import logging
+
+# 配置日志
+logging.basicConfig(filename='fetch_channels.log', level=logging.ERROR)
 
 def is_ipv6(url):
     try:
@@ -42,6 +46,9 @@ def updateChannelUrlsM3U(channels, template_channels):
                 announcement['name'] = current_date
 
     output_path = 'output'
+    if not os.path.exists(output_path):
+        os.makedirs(output_path)
+
     with open(os.path.join(output_path, "live_ipv4.m3u"), "w", encoding="utf-8") as f_m3u_ipv4, \
             open(os.path.join(output_path, "live_ipv4.txt"), "w", encoding="utf-8") as f_txt_ipv4, \
             open(os.path.join(output_path, "live_ipv6.m3u"), "w", encoding="utf-8") as f_m3u_ipv6, \
@@ -87,8 +94,10 @@ def updateChannelUrlsM3U(channels, template_channels):
 def fetch_channels():
     channels = {}
     for url in config.source_urls:
+        print(f"Fetching source: {url}")  # 添加调试信息
         try:
             response = requests.get(url)
+            print(f"Response status code for {url}: {response.status_code}")  # 添加调试信息
             if response.status_code == 200:
                 lines = response.text.splitlines()
                 current_category = None
@@ -99,6 +108,7 @@ def fetch_channels():
                             channels[current_category] = {}
                     elif ',' in line:
                         parts = line.split(',')
+                        print(f"Parsing line: {line}, parts: {parts}")  # 添加调试信息
                         if len(parts) >= 3:
                             channel_name = parts[0]
                             url = parts[1]
@@ -110,7 +120,7 @@ def fetch_channels():
                                 channels[current_category][channel_name] = []
                             channels[current_category][channel_name].append((url, response_time, logo_url))
         except Exception as e:
-            print(f"Error fetching {url}: {e}")
+            logging.error(f"Error fetching {url}: {e}")
     return channels
 
 if __name__ == "__main__":
