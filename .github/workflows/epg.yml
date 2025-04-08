@@ -41,5 +41,8 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "Automated EPG update"
+            # 拉取远程更新并合并
+            git pull --rebase
             git push
-          fi    
+          fi
+    
