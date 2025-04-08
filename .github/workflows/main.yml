@@ -1,4 +1,4 @@
-name: Daily Update
+name: 每天自动更新IPTV直播源
 
 on:
   schedule:
