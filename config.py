@@ -9,7 +9,6 @@ source_urls = [
     "https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt",
     "https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt",
     "https://live.zbds.top/tv/iptv4.txt",
-    "https://live.kilvn.com/iptv.m3u",
     "https://gitee.com/xxy002/zhiboyuan/raw/master/dsy",
     "https://gh.tryxd.cn/https://raw.githubusercontent.com/tianya7981/jiekou/refs/heads/main/野火959",
     "https://gh.tryxd.cn/https://raw.githubusercontent.com/big-mouth-cn/tv/main/iptv-ok.m3u",
