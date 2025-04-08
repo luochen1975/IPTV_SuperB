@@ -1,5 +1,5 @@
 import os
-import datetime
+from datetime import datetime
 import requests
 from ipaddress import ip_address
 
@@ -117,4 +117,4 @@ if __name__ == "__main__":
     import config
     channels = fetch_channels()
     template_channels = {}  # 可以根据需要添加模板频道
-    updateChannelUrlsM3U(channels, template_channels)
+    updateChannelUrlsM3U(channels, template_channels)    
