@@ -50,28 +50,26 @@ def fetch_channels(url):
     """
     从指定URL抓取频道列表。
     :param url: 直播源URL
-    :return: 包含频道信息（名称、URL、logo URL）的有序字典
+    :return: 包含频道信息（名称、URL、logo URL、响应时间）的有序字典
     """
     all_channels = OrderedDict()
     try:
         response = requests.get(url)
         if response.status_code == 200:
             lines = response.text.splitlines()
-            response_time = response.elapsed.total_seconds()
             if url.endswith('.m3u'):
-                all_channels = parse_m3u_lines(lines, response_time)
+                all_channels = parse_m3u_lines(lines)
             elif url.endswith('.txt'):
-                all_channels = parse_txt_lines(lines, response_time)
+                all_channels = parse_txt_lines(lines)
     except Exception as e:
         logging.error(f"Error fetching channels from {url}: {e}")
     return all_channels
 
-def parse_m3u_lines(lines, response_time):
+def parse_m3u_lines(lines):
     """
     解析M3U格式的频道列表行。
     :param lines: M3U文件的行列表
-    :param response_time: 响应时间
-    :return: 包含频道信息（名称、URL、logo URL）的有序字典
+    :return: 包含频道信息（名称、URL、logo URL、响应时间）的有序字典
     """
     channels = OrderedDict()
     current_channel = None
@@ -85,21 +83,26 @@ def parse_m3u_lines(lines, response_time):
                 logo_url = logo_match.group(1) if logo_match else ''
                 current_channel = {
                     'name': channel_name,
-                    'logo_url': logo_url,
-                    'response_time': response_time
+                    'logo_url': logo_url
                 }
         elif line.startswith('http') and current_channel:
             current_channel['url'] = line
+            try:
+                start_time = time.time()
+                test_response = requests.get(line, timeout=5)
+                response_time = time.time() - start_time
+                current_channel['response_time'] = response_time
+            except Exception as e:
+                current_channel['response_time'] = float('inf')
             channels[current_channel['name']] = current_channel
             current_channel = None
     return channels
 
-def parse_txt_lines(lines, response_time):
+def parse_txt_lines(lines):
     """
     解析TXT格式的频道列表行。
     :param lines: TXT文件的行列表
-    :param response_time: 响应时间
-    :return: 包含频道信息（名称、URL、logo URL）的有序字典
+    :return: 包含频道信息（名称、URL、logo URL、响应时间）的有序字典
     """
     channels = OrderedDict()
     for line in lines:
@@ -107,6 +110,12 @@ def parse_txt_lines(lines, response_time):
             parts = line.strip().split(',')
             if len(parts) >= 3:
                 channel_name, url, logo_url = parts[:3]
+                try:
+                    start_time = time.time()
+                    test_response = requests.get(url, timeout=5)
+                    response_time = time.time() - start_time
+                except Exception as e:
+                    response_time = float('inf')
                 channels[channel_name] = {
                     'name': channel_name,
                     'url': url,
@@ -117,7 +126,7 @@ def parse_txt_lines(lines, response_time):
 
 def match_channels(template_channels, all_channels):
     """
-    匹配模板中的频道与抓取到的频道。
+    匹配模板中的频道与抓取到的频道，选择响应时间最短的。
     :param template_channels: 模板频道信息
     :param all_channels: 所有抓取到的频道信息
     :return: 匹配后的频道信息
@@ -125,16 +134,21 @@ def match_channels(template_channels, all_channels):
     matched_channels = OrderedDict()
     for channel_name, template_info in template_channels.items():
         cleaned_template_name = clean_channel_name(channel_name)
+        best_match = None
+        best_response_time = float('inf')
         for fetched_name, fetched_info in all_channels.items():
             cleaned_fetched_name = clean_channel_name(fetched_name)
             if cleaned_template_name == cleaned_fetched_name:
-                matched_channels[channel_name] = {
-                    'category': template_info['category'],
-                    'url': fetched_info['url'],
-                    'logo_url': fetched_info.get('logo_url', template_info['logo_url']),
-                    'response_time': fetched_info['response_time']
-                }
-                break
+                if fetched_info['response_time'] < best_response_time:
+                    best_match = fetched_info
+                    best_response_time = fetched_info['response_time']
+        if best_match:
+            matched_channels[channel_name] = {
+                'category': template_info['category'],
+                'url': best_match['url'],
+                'logo_url': best_match.get('logo_url', template_info['logo_url']),
+                'response_time': best_match['response_time']
+            }
     return matched_channels
 
 def filter_source_urls(template_file):
@@ -226,9 +240,9 @@ def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url, respons
     :param response_time: 响应时间
     :param logo_url: 图标URL
     """
-    f_m3u.write(f'#EXTINF:-1 group-title="{category}" tvg-logo="{logo_url}",{channel_name}\n')
+    f_m3u.write(f'#EXTINF:-1 group-title="{category}" tvg-logo="{logo_url}",{channel_name} (Response Time: {response_time:.3f}s)\n')
     f_m3u.write(f'{new_url}\n')
-    f_txt.write(f'{channel_name},{new_url},{logo_url}\n')
+    f_txt.write(f'{channel_name},{new_url},{logo_url},{response_time:.3f}\n')
 
 if __name__ == "__main__":
     template_file = "demo.txt"
