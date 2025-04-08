@@ -73,3 +73,4 @@
 2025-04-08 14:24:23,088 - INFO - url: https://live.zhoujie218.top/tv/iptv4.txt 成功，判断为txt格式，响应时间: 1.47 秒
 2025-04-08 14:24:23,096 - INFO - url: https://live.zhoujie218.top/tv/iptv4.txt 成功，包含频道分类: 央视频道, 卫视频道, 电影频道, 数字频道, 儿童频道, 地方频道, 综艺频道, 纪录频道, 体育频道, 解说频道, 游戏频道, 音乐频道, 戏曲频道, 春晚频道, 直播中国, 其他频道, 更新时间
 2025-04-08 14:39:49,255 - ERROR - Error fetching channels from https://example.com/channels.m3u: 404 Client Error: Not Found for url: https://example.com/channels.m3u
+2025-04-08 15:08:49,010 - ERROR - Error fetching channels from https://example.com/channels.m3u: 404 Client Error: Not Found for url: https://example.com/channels.m3u
