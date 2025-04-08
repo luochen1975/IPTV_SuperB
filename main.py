@@ -5,16 +5,12 @@ from collections import OrderedDict
 from datetime import datetime
 import config
 
-# 配置日志记录
+# 日志记录。
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s',
                     handlers=[logging.FileHandler("function.log", "w", encoding="utf-8"), logging.StreamHandler()])
 
 def parse_template(template_file):
-    """
-    解析模板文件，提取频道分类和频道名称。
-    :param template_file: 模板文件路径
-    :return: 包含频道分类和频道名称的有序字典
-    """
+    # 解析模板文件，提取频道分类和频道名称。
     template_channels = OrderedDict()
     current_category = None
 
@@ -33,23 +29,15 @@ def parse_template(template_file):
 
     return template_channels
 
+# 数据清洗函数
 def clean_channel_name(channel_name):
-    """
-    清洗频道名称，去除特殊字符和空白，将数字转换为整数，并转换为大写。
-    :param channel_name: 原始频道名称
-    :return: 清洗后的频道名称
-    """
     cleaned_name = re.sub(r'[$「」-]', '', channel_name)  # 去掉中括号、«», 和'-'字符
     cleaned_name = re.sub(r'\s+', '', cleaned_name)  # 去掉所有空白字符
     cleaned_name = re.sub(r'(\D*)(\d+)', lambda m: m.group(1) + str(int(m.group(2))), cleaned_name)  # 将数字前面的部分保留，数字转换为整数
     return cleaned_name.upper()  # 转换为大写
 
 def fetch_channels(url):
-    """
-    从指定URL抓取频道列表。
-    :param url: 直播源URL
-    :return: 包含频道分类和频道信息的有序字典
-    """
+    # 从指定URL抓取频道列表。
     channels = OrderedDict()
 
     try:
@@ -76,11 +64,7 @@ def fetch_channels(url):
     return channels
 
 def parse_m3u_lines(lines):
-    """
-    解析M3U格式的频道列表行。
-    :param lines: M3U文件的行列表
-    :return: 包含频道分类和频道信息的有序字典
-    """
+    # 解析M3U格式的频道列表行。
     channels = OrderedDict()
     current_category = None
 
@@ -105,11 +89,7 @@ def parse_m3u_lines(lines):
     return channels
 
 def parse_txt_lines(lines):
-    """
-    解析TXT格式的频道列表行。
-    :param lines: TXT文件的行列表
-    :return: 包含频道分类和频道信息的有序字典
-    """
+    # 解析TXT格式的频道列表行。
     channels = OrderedDict()
     current_category = None
 
@@ -138,12 +118,7 @@ def parse_txt_lines(lines):
     return channels
 
 def match_channels(template_channels, all_channels):
-    """
-    匹配模板中的频道与抓取到的频道。
-    :param template_channels: 模板频道信息
-    :param all_channels: 抓取到的所有频道信息
-    :return: 匹配成功的频道信息
-    """
+    # 匹配模板中的频道与抓取到的频道。
     matched_channels = OrderedDict()
 
     for category, channel_list in template_channels.items():
@@ -158,11 +133,7 @@ def match_channels(template_channels, all_channels):
     return matched_channels
 
 def filter_source_urls(template_file):
-    """
-    过滤源URL，获取匹配后的频道信息。
-    :param template_file: 模板文件路径
-    :return: 匹配后的频道信息和模板频道信息
-    """
+    # 过滤源URL，获取匹配后的频道信息。
     template_channels = parse_template(template_file)
     source_urls = config.source_urls
 
@@ -176,11 +147,7 @@ def filter_source_urls(template_file):
     return matched_channels, template_channels
 
 def merge_channels(target, source):
-    """
-    合并两个频道字典。
-    :param target: 目标字典
-    :param source: 源字典
-    """
+    # 合并两个频道字典。
     for category, channel_list in source.items():
         if category in target:
             target[category].extend(channel_list)
@@ -188,19 +155,11 @@ def merge_channels(target, source):
             target[category] = channel_list
 
 def is_ipv6(url):
-    """
-    判断URL是否为IPv6地址。
-    :param url: 待判断的URL
-    :return: 如果是IPv6地址返回True，否则返回False
-    """
+    # 判断URL是否为IPv6地址。
     return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
 
 def updateChannelUrlsM3U(channels, template_channels):
-    """
-    更新频道URL到M3U和TXT文件中。
-    :param channels: 匹配后的频道信息
-    :param template_channels: 模板频道信息
-    """
+    # 更新频道URL到M3U和TXT文件中。
     written_urls_ipv4 = set()
     written_urls_ipv6 = set()
 
@@ -253,12 +212,7 @@ def updateChannelUrlsM3U(channels, template_channels):
         f_txt_ipv6.write("\n")
 
 def sort_and_filter_urls(urls, written_urls):
-    """
-    排序和过滤URL。
-    :param urls: 待排序和过滤的URL列表
-    :param written_urls: 已写入的URL集合
-    :return: 排序和过滤后的URL列表
-    """
+    # 排序和过滤URL。
     filtered_urls = [
         url for url in sorted(urls, key=lambda u: not is_ipv6(u) if config.ip_version_priority == "ipv6" else is_ipv6(u))
         if url and url not in written_urls and not any(blacklist in url for blacklist in config.url_blacklist)
@@ -267,28 +221,13 @@ def sort_and_filter_urls(urls, written_urls):
     return filtered_urls
 
 def add_url_suffix(url, index, total_urls, ip_version):
-    """
-    添加URL后缀。
-    :param url: 原始URL
-    :param index: 当前URL的索引
-    :param total_urls: 总URL数量
-    :param ip_version: IP版本（IPV4或IPV6）
-    :return: 添加后缀后的URL
-    """
+    # 添加URL后缀。
     suffix = f"${ip_version}" if total_urls == 1 else f"${ip_version}•线路{index}"
     base_url = url.split('$', 1)[0] if '$' in url else url
     return f"{base_url}{suffix}"
 
 def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url):
-    """
-    写入M3U和TXT文件。
-    :param f_m3u: M3U文件对象
-    :param f_txt: TXT文件对象
-    :param category: 频道分类
-    :param channel_name: 频道名称
-    :param index: 当前URL的索引
-    :param new_url: 添加后缀后的URL
-    """
+    # 写入M3U和TXT文件。
     logo_url = f"https://gitee.com/IIII-9306/PAV/raw/master/logos/{channel_name}.png"
     f_m3u.write(f"#EXTINF:-1 tvg-id=\"{index}\" tvg-name=\"{channel_name}\" tvg-logo=\"{logo_url}\" group-title=\"{category}\",{channel_name}\n")
     f_m3u.write(new_url + "\n")
