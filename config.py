@@ -109,6 +109,8 @@ epg_urls = [
     "http://epg.51zmt.top:8000/e.xml",
     "https://epg.pw/xmltv/epg_CN.xml",
     "https://epg.pw/xmltv/epg_HK.xml",
+    "https://live.kilvn.com/epg.xml.gz",
+    "https://e.erw.cc/all.xml.gz",
     "https://epg.pw/xmltv/epg_TW.xml"
     # 可以添加更多节目单URL
 ]
