@@ -1,7 +1,0 @@
-ERROR:root:Error fetching : None
-ERROR:root:Error fetching tvg-id="NHK東京総合" tvg-name="NHK東京総合" tvg-logo="https://epg.v1.mk/logo/AXNHK.png" group-title="国际新闻": None
-ERROR:root:Error fetching group-title="「斗鱼」一起看": None
-ERROR:root:Error fetching tvg-id="爱动漫" tvg-name="iHOT爱动漫" tvg-logo="https://gitee.com/suxuang/epglogo/raw/master/IHOT/ihot11.png" group-title="动画频道": None
-ERROR:root:Error fetching "http://epg.51zmt.top:8000/e.xml": None
-ERROR:root:Error fetching #genre#: None
-ERROR:root:Error fetching tvg-id="4K60PSDR-H264-AAC测试" tvg-name="4K60PSDR-H264-AAC测试" tvg-logo="https://cdn.jsdelivr.net/gh/feiyangdigital/testvideo/tg.jpg" group-title="4K频道": None
