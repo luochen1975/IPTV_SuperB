@@ -1,187 +1,187 @@
-2025-04-09 23:39:29,190 - INFO - Parsing template file demo.txt
-2025-04-09 23:39:29,191 - INFO - Source URLs: ['http://aktv.space/live.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperA/main/output/result.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/auto-iptv/main/live_ipv4.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt', 'https://live.zbds.top/tv/iptv4.txt', 'https://gitee.com/xxy002/zhiboyuan/raw/master/dsy', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/tianya7981/jiekou/refs/heads/main/野火959', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/big-mouth-cn/tv/main/iptv-ok.m3u', 'https://codeberg.org/alfredisme/mytvsources/raw/branch/main/mylist-ipv6.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/wwb521/live/main/tv.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/l.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/kk.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/APTV.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u', 'https://live.zbds.top/tv/iptv6.txt', 'http://xhztv.top/new.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/TV/gd/output/result.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/hd.txt', 'https://live.fanmingming.cn/tv/m3u/ipv6.m3u', 'https://live.zhoujie218.top/tv/iptv6.txt', 'https://cdn.jsdelivr.net/gh/YueChan/live@main/IPTV.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/PizazzGY/TVBox_warehouse/main/live.txt', 'https://fm1077.serv00.net/SmartTV.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/joevess/IPTV/main/home.m3u8', 'https://tv.youdu.fan:666/live/', 'https://m3u.ibert.me/txt/o_cn.txt', 'https://m3u.ibert.me/txt/j_iptv.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/xzw832/cmys/main/S_CCTV.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/xzw832/cmys/main/S_weishi.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/BurningC4/Chinese-IPTV/master/TV-IPV4.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/joevess/IPTV/main/m3u/iptv.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPV6.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u', 'https://iptv.b2og.com/txt/fmml_ipv6.txt', 'http://xhztv.top/zbc.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output_simple.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/SPX372928/MyIPTV/master/黑龙江PLTV移动CDN版.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.m3u', 'https://live.zhoujie218.top/tv/iptv4.txt']
-2025-04-09 23:39:29,191 - INFO - Fetching channels from http://aktv.space/live.m3u
-2025-04-09 23:39:29,352 - INFO - Successfully fetched channels from http://aktv.space/live.m3u
-2025-04-09 23:39:29,352 - INFO - Parsing 167 M3U lines
-2025-04-09 23:39:29,352 - INFO - Parsed 0 categories from M3U lines
-2025-04-09 23:39:29,352 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperA/main/output/result.m3u
-2025-04-09 23:39:31,322 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperA/main/output/result.m3u
-2025-04-09 23:39:31,376 - INFO - Parsing 185680 M3U lines
-2025-04-09 23:39:31,582 - INFO - Parsed 186 categories from M3U lines
-2025-04-09 23:39:31,586 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/auto-iptv/main/live_ipv4.txt
-2025-04-09 23:39:33,831 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/auto-iptv/main/live_ipv4.txt
-2025-04-09 23:39:33,839 - INFO - Parsing 42647 TXT lines
-2025-04-09 23:39:33,967 - INFO - Parsed 7 categories from TXT lines
-2025-04-09 23:39:33,969 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt
-2025-04-09 23:39:35,156 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt
-2025-04-09 23:39:35,157 - INFO - Parsing 3730 TXT lines
-2025-04-09 23:39:35,170 - INFO - Parsed 41 categories from TXT lines
-2025-04-09 23:39:35,170 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt
-2025-04-09 23:39:36,121 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt
-2025-04-09 23:39:36,121 - INFO - Parsing 3 TXT lines
-2025-04-09 23:39:36,121 - INFO - Parsed 3 categories from TXT lines
-2025-04-09 23:39:36,122 - INFO - Fetching channels from https://live.zbds.top/tv/iptv4.txt
-2025-04-09 23:39:36,964 - INFO - Successfully fetched channels from https://live.zbds.top/tv/iptv4.txt
-2025-04-09 23:39:36,965 - INFO - Parsing 2572 TXT lines
-2025-04-09 23:39:36,972 - INFO - Parsed 17 categories from TXT lines
-2025-04-09 23:39:36,972 - INFO - Fetching channels from https://gitee.com/xxy002/zhiboyuan/raw/master/dsy
-2025-04-09 23:39:38,669 - INFO - Successfully fetched channels from https://gitee.com/xxy002/zhiboyuan/raw/master/dsy
-2025-04-09 23:39:38,670 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/tianya7981/jiekou/refs/heads/main/野火959
-2025-04-09 23:39:39,666 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/tianya7981/jiekou/refs/heads/main/野火959
-2025-04-09 23:39:39,666 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/big-mouth-cn/tv/main/iptv-ok.m3u
-2025-04-09 23:39:40,962 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/big-mouth-cn/tv/main/iptv-ok.m3u
-2025-04-09 23:39:40,963 - INFO - Parsing 2079 M3U lines
-2025-04-09 23:39:40,968 - INFO - Parsed 525 categories from M3U lines
-2025-04-09 23:39:40,968 - INFO - Fetching channels from https://codeberg.org/alfredisme/mytvsources/raw/branch/main/mylist-ipv6.m3u
-2025-04-09 23:39:41,613 - INFO - Successfully fetched channels from https://codeberg.org/alfredisme/mytvsources/raw/branch/main/mylist-ipv6.m3u
-2025-04-09 23:39:41,614 - INFO - Parsing 345 M3U lines
-2025-04-09 23:39:41,614 - INFO - Parsed 22 categories from M3U lines
-2025-04-09 23:39:41,615 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u
-2025-04-09 23:39:43,192 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u
-2025-04-09 23:39:43,198 - INFO - Parsing 22690 M3U lines
-2025-04-09 23:39:43,223 - INFO - Parsed 100 categories from M3U lines
-2025-04-09 23:39:43,223 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/wwb521/live/main/tv.m3u
-2025-04-09 23:39:44,572 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/wwb521/live/main/tv.m3u
-2025-04-09 23:39:44,573 - INFO - Parsing 5451 M3U lines
-2025-04-09 23:39:44,579 - INFO - Parsed 11 categories from M3U lines
-2025-04-09 23:39:44,579 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.m3u
-2025-04-09 23:39:45,555 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.m3u
-2025-04-09 23:39:45,556 - INFO - Parsing 549 M3U lines
-2025-04-09 23:39:45,556 - INFO - Parsed 3 categories from M3U lines
-2025-04-09 23:39:45,557 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/l.txt
-2025-04-09 23:39:46,350 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/l.txt
-2025-04-09 23:39:46,350 - INFO - Parsing 785 TXT lines
-2025-04-09 23:39:46,353 - INFO - Parsed 11 categories from TXT lines
-2025-04-09 23:39:46,353 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/kk.txt
-2025-04-09 23:39:47,343 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/kk.txt
-2025-04-09 23:39:47,343 - INFO - Parsing 915 TXT lines
-2025-04-09 23:39:47,346 - INFO - Parsed 14 categories from TXT lines
-2025-04-09 23:39:47,346 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u
-2025-04-09 23:39:48,326 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u
-2025-04-09 23:39:48,327 - INFO - Parsing 1793 M3U lines
-2025-04-09 23:39:48,329 - INFO - Parsed 20 categories from M3U lines
-2025-04-09 23:39:48,329 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u
-2025-04-09 23:39:49,521 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u
-2025-04-09 23:39:49,523 - INFO - Parsing 5201 M3U lines
-2025-04-09 23:39:49,528 - INFO - Parsed 41 categories from M3U lines
-2025-04-09 23:39:49,529 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u
-2025-04-09 23:39:51,282 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u
-2025-04-09 23:39:51,290 - INFO - Parsing 27491 M3U lines
-2025-04-09 23:39:51,320 - INFO - Parsed 7 categories from M3U lines
-2025-04-09 23:39:51,320 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u
-2025-04-09 23:39:52,143 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u
-2025-04-09 23:39:52,143 - INFO - Parsing 261 M3U lines
-2025-04-09 23:39:52,143 - INFO - Parsed 4 categories from M3U lines
-2025-04-09 23:39:52,144 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/APTV.m3u
-2025-04-09 23:39:52,929 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/APTV.m3u
-2025-04-09 23:39:52,929 - INFO - Parsing 169 M3U lines
-2025-04-09 23:39:52,929 - INFO - Parsed 4 categories from M3U lines
-2025-04-09 23:39:52,930 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u
-2025-04-09 23:39:53,739 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u
-2025-04-09 23:39:53,739 - INFO - Parsing 222 M3U lines
-2025-04-09 23:39:53,740 - INFO - Parsed 4 categories from M3U lines
-2025-04-09 23:39:53,740 - INFO - Fetching channels from https://live.zbds.top/tv/iptv6.txt
-2025-04-09 23:39:54,385 - INFO - Successfully fetched channels from https://live.zbds.top/tv/iptv6.txt
-2025-04-09 23:39:54,385 - INFO - Parsing 67 TXT lines
-2025-04-09 23:39:54,386 - INFO - Parsed 7 categories from TXT lines
-2025-04-09 23:39:54,386 - INFO - Fetching channels from http://xhztv.top/new.txt
-2025-04-09 23:39:54,571 - INFO - Successfully fetched channels from http://xhztv.top/new.txt
-2025-04-09 23:39:54,571 - INFO - Parsing 3295 TXT lines
-2025-04-09 23:39:54,579 - INFO - Parsed 42 categories from TXT lines
-2025-04-09 23:39:54,579 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/TV/gd/output/result.txt
-2025-04-09 23:39:56,003 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/TV/gd/output/result.txt
-2025-04-09 23:39:56,004 - INFO - Parsing 2681 TXT lines
-2025-04-09 23:39:56,012 - INFO - Parsed 41 categories from TXT lines
-2025-04-09 23:39:56,012 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/hd.txt
-2025-04-09 23:39:57,193 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/hd.txt
-2025-04-09 23:39:57,194 - INFO - Parsing 3147 TXT lines
-2025-04-09 23:39:57,203 - INFO - Parsed 39 categories from TXT lines
-2025-04-09 23:39:57,203 - INFO - Fetching channels from https://live.fanmingming.cn/tv/m3u/ipv6.m3u
-2025-04-09 23:39:57,492 - INFO - Successfully fetched channels from https://live.fanmingming.cn/tv/m3u/ipv6.m3u
-2025-04-09 23:39:57,567 - INFO - Parsing 206 M3U lines
-2025-04-09 23:39:57,568 - INFO - Parsed 5 categories from M3U lines
-2025-04-09 23:39:57,568 - INFO - Fetching channels from https://live.zhoujie218.top/tv/iptv6.txt
-2025-04-09 23:39:58,650 - INFO - Successfully fetched channels from https://live.zhoujie218.top/tv/iptv6.txt
-2025-04-09 23:39:58,650 - INFO - Parsing 67 TXT lines
-2025-04-09 23:39:58,650 - INFO - Parsed 7 categories from TXT lines
-2025-04-09 23:39:58,651 - INFO - Fetching channels from https://cdn.jsdelivr.net/gh/YueChan/live@main/IPTV.m3u
-2025-04-09 23:39:58,669 - INFO - Successfully fetched channels from https://cdn.jsdelivr.net/gh/YueChan/live@main/IPTV.m3u
-2025-04-09 23:39:58,680 - INFO - Parsing 157 M3U lines
-2025-04-09 23:39:58,680 - INFO - Parsed 4 categories from M3U lines
-2025-04-09 23:39:58,680 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.txt
-2025-04-09 23:39:59,475 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.txt
-2025-04-09 23:39:59,476 - INFO - Parsing 3 TXT lines
-2025-04-09 23:39:59,476 - INFO - Parsed 3 categories from TXT lines
-2025-04-09 23:39:59,476 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/PizazzGY/TVBox_warehouse/main/live.txt
-2025-04-09 23:40:00,262 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/PizazzGY/TVBox_warehouse/main/live.txt
-2025-04-09 23:40:00,262 - INFO - Parsing 17 TXT lines
-2025-04-09 23:40:00,262 - INFO - Parsed 1 categories from TXT lines
-2025-04-09 23:40:00,262 - INFO - Fetching channels from https://fm1077.serv00.net/SmartTV.m3u
-2025-04-09 23:40:00,971 - INFO - Successfully fetched channels from https://fm1077.serv00.net/SmartTV.m3u
-2025-04-09 23:40:01,023 - INFO - Parsing 1126 M3U lines
-2025-04-09 23:40:01,024 - INFO - Parsed 17 categories from M3U lines
-2025-04-09 23:40:01,024 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/joevess/IPTV/main/home.m3u8
-2025-04-09 23:40:01,848 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/joevess/IPTV/main/home.m3u8
-2025-04-09 23:40:01,848 - INFO - Fetching channels from https://tv.youdu.fan:666/live/
-2025-04-09 23:40:03,423 - INFO - Successfully fetched channels from https://tv.youdu.fan:666/live/
-2025-04-09 23:40:03,423 - INFO - Fetching channels from https://m3u.ibert.me/txt/o_cn.txt
-2025-04-09 23:40:03,520 - INFO - Successfully fetched channels from https://m3u.ibert.me/txt/o_cn.txt
-2025-04-09 23:40:03,520 - INFO - Parsing 198 TXT lines
-2025-04-09 23:40:03,521 - INFO - Parsed 25 categories from TXT lines
-2025-04-09 23:40:03,521 - INFO - Fetching channels from https://m3u.ibert.me/txt/j_iptv.txt
-2025-04-09 23:40:03,557 - INFO - Successfully fetched channels from https://m3u.ibert.me/txt/j_iptv.txt
-2025-04-09 23:40:03,557 - INFO - Parsing 0 TXT lines
-2025-04-09 23:40:03,557 - INFO - Parsed 0 categories from TXT lines
-2025-04-09 23:40:03,557 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/xzw832/cmys/main/S_CCTV.txt
-2025-04-09 23:40:04,348 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/xzw832/cmys/main/S_CCTV.txt
-2025-04-09 23:40:04,348 - INFO - Parsing 8 TXT lines
-2025-04-09 23:40:04,348 - INFO - Parsed 0 categories from TXT lines
-2025-04-09 23:40:04,348 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/xzw832/cmys/main/S_weishi.txt
-2025-04-09 23:40:05,159 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/xzw832/cmys/main/S_weishi.txt
-2025-04-09 23:40:05,159 - INFO - Parsing 17 TXT lines
-2025-04-09 23:40:05,159 - INFO - Parsed 0 categories from TXT lines
-2025-04-09 23:40:05,159 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/BurningC4/Chinese-IPTV/master/TV-IPV4.m3u
-2025-04-09 23:40:05,957 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/BurningC4/Chinese-IPTV/master/TV-IPV4.m3u
-2025-04-09 23:40:05,957 - INFO - Parsing 175 M3U lines
-2025-04-09 23:40:05,958 - INFO - Parsed 0 categories from M3U lines
-2025-04-09 23:40:05,958 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/joevess/IPTV/main/m3u/iptv.m3u
-2025-04-09 23:40:06,756 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/joevess/IPTV/main/m3u/iptv.m3u
-2025-04-09 23:40:06,756 - INFO - Parsing 1 M3U lines
-2025-04-09 23:40:06,756 - INFO - Parsed 0 categories from M3U lines
-2025-04-09 23:40:06,756 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPV6.m3u
-2025-04-09 23:40:07,542 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPV6.m3u
-2025-04-09 23:40:07,542 - INFO - Parsing 185 M3U lines
-2025-04-09 23:40:07,542 - INFO - Parsed 1 categories from M3U lines
-2025-04-09 23:40:07,542 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u
-2025-04-09 23:40:08,711 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u
-2025-04-09 23:40:08,711 - INFO - Parsing 261 M3U lines
-2025-04-09 23:40:08,712 - INFO - Parsed 4 categories from M3U lines
-2025-04-09 23:40:08,712 - INFO - Fetching channels from https://iptv.b2og.com/txt/fmml_ipv6.txt
-2025-04-09 23:40:09,412 - INFO - Successfully fetched channels from https://iptv.b2og.com/txt/fmml_ipv6.txt
-2025-04-09 23:40:09,412 - INFO - Parsing 111 TXT lines
-2025-04-09 23:40:09,413 - INFO - Parsed 5 categories from TXT lines
-2025-04-09 23:40:09,413 - INFO - Fetching channels from http://xhztv.top/zbc.txt
-2025-04-09 23:40:09,602 - INFO - Successfully fetched channels from http://xhztv.top/zbc.txt
-2025-04-09 23:40:09,602 - INFO - Parsing 1189 TXT lines
-2025-04-09 23:40:09,605 - INFO - Parsed 14 categories from TXT lines
-2025-04-09 23:40:09,605 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output_simple.txt
-2025-04-09 23:40:10,799 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output_simple.txt
-2025-04-09 23:40:10,800 - INFO - Parsing 4256 TXT lines
-2025-04-09 23:40:10,811 - INFO - Parsed 24 categories from TXT lines
-2025-04-09 23:40:10,811 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/SPX372928/MyIPTV/master/黑龙江PLTV移动CDN版.txt
-2025-04-09 23:40:11,602 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/SPX372928/MyIPTV/master/黑龙江PLTV移动CDN版.txt
-2025-04-09 23:40:11,602 - INFO - Parsing 210 TXT lines
-2025-04-09 23:40:11,602 - INFO - Parsed 0 categories from TXT lines
-2025-04-09 23:40:11,603 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt
-2025-04-09 23:40:13,207 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt
-2025-04-09 23:40:13,210 - INFO - Parsing 11660 TXT lines
-2025-04-09 23:40:13,234 - INFO - Parsed 16 categories from TXT lines
-2025-04-09 23:40:13,234 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.m3u
-2025-04-09 23:40:14,784 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.m3u
-2025-04-09 23:40:14,795 - INFO - Parsing 41679 M3U lines
-2025-04-09 23:40:14,845 - INFO - Parsed 69 categories from M3U lines
-2025-04-09 23:40:14,846 - INFO - Fetching channels from https://live.zhoujie218.top/tv/iptv4.txt
-2025-04-09 23:40:16,114 - INFO - Successfully fetched channels from https://live.zhoujie218.top/tv/iptv4.txt
-2025-04-09 23:40:16,115 - INFO - Parsing 2572 TXT lines
-2025-04-09 23:40:16,122 - INFO - Parsed 17 categories from TXT lines
-2025-04-09 23:40:16,122 - INFO - Matching channels
+2025-04-09 23:43:23,010 - INFO - Parsing template file demo.txt
+2025-04-09 23:43:23,010 - INFO - Source URLs: ['http://aktv.space/live.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperA/main/output/result.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/auto-iptv/main/live_ipv4.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt', 'https://live.zbds.top/tv/iptv4.txt', 'https://gitee.com/xxy002/zhiboyuan/raw/master/dsy', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/tianya7981/jiekou/refs/heads/main/野火959', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/big-mouth-cn/tv/main/iptv-ok.m3u', 'https://codeberg.org/alfredisme/mytvsources/raw/branch/main/mylist-ipv6.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/wwb521/live/main/tv.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/l.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/kk.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/APTV.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u', 'https://live.zbds.top/tv/iptv6.txt', 'http://xhztv.top/new.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/TV/gd/output/result.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/hd.txt', 'https://live.fanmingming.cn/tv/m3u/ipv6.m3u', 'https://live.zhoujie218.top/tv/iptv6.txt', 'https://cdn.jsdelivr.net/gh/YueChan/live@main/IPTV.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/PizazzGY/TVBox_warehouse/main/live.txt', 'https://fm1077.serv00.net/SmartTV.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/joevess/IPTV/main/home.m3u8', 'https://tv.youdu.fan:666/live/', 'https://m3u.ibert.me/txt/o_cn.txt', 'https://m3u.ibert.me/txt/j_iptv.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/xzw832/cmys/main/S_CCTV.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/xzw832/cmys/main/S_weishi.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/BurningC4/Chinese-IPTV/master/TV-IPV4.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/joevess/IPTV/main/m3u/iptv.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPV6.m3u', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u', 'https://iptv.b2og.com/txt/fmml_ipv6.txt', 'http://xhztv.top/zbc.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output_simple.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/SPX372928/MyIPTV/master/黑龙江PLTV移动CDN版.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt', 'https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.m3u', 'https://live.zhoujie218.top/tv/iptv4.txt']
+2025-04-09 23:43:23,010 - INFO - Fetching channels from http://aktv.space/live.m3u
+2025-04-09 23:43:23,187 - INFO - Successfully fetched channels from http://aktv.space/live.m3u
+2025-04-09 23:43:23,187 - INFO - Parsing 167 M3U lines
+2025-04-09 23:43:23,188 - INFO - Parsed 0 categories from M3U lines
+2025-04-09 23:43:23,188 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperA/main/output/result.m3u
+2025-04-09 23:43:25,936 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/IPTV_SuperA/main/output/result.m3u
+2025-04-09 23:43:25,991 - INFO - Parsing 185680 M3U lines
+2025-04-09 23:43:26,307 - INFO - Parsed 185 categories from M3U lines
+2025-04-09 23:43:26,311 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/auto-iptv/main/live_ipv4.txt
+2025-04-09 23:43:28,617 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/auto-iptv/main/live_ipv4.txt
+2025-04-09 23:43:28,625 - INFO - Parsing 42647 TXT lines
+2025-04-09 23:43:28,755 - INFO - Parsed 7 categories from TXT lines
+2025-04-09 23:43:28,758 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt
+2025-04-09 23:43:30,397 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/alantang1977/JunTV/refs/heads/main/output/result.txt
+2025-04-09 23:43:30,398 - INFO - Parsing 3730 TXT lines
+2025-04-09 23:43:30,410 - INFO - Parsed 41 categories from TXT lines
+2025-04-09 23:43:30,411 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt
+2025-04-09 23:43:31,522 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.txt
+2025-04-09 23:43:31,522 - INFO - Parsing 3 TXT lines
+2025-04-09 23:43:31,522 - INFO - Parsed 3 categories from TXT lines
+2025-04-09 23:43:31,522 - INFO - Fetching channels from https://live.zbds.top/tv/iptv4.txt
+2025-04-09 23:43:32,610 - INFO - Successfully fetched channels from https://live.zbds.top/tv/iptv4.txt
+2025-04-09 23:43:32,611 - INFO - Parsing 2572 TXT lines
+2025-04-09 23:43:32,618 - INFO - Parsed 17 categories from TXT lines
+2025-04-09 23:43:32,618 - INFO - Fetching channels from https://gitee.com/xxy002/zhiboyuan/raw/master/dsy
+2025-04-09 23:43:34,595 - INFO - Successfully fetched channels from https://gitee.com/xxy002/zhiboyuan/raw/master/dsy
+2025-04-09 23:43:34,596 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/tianya7981/jiekou/refs/heads/main/野火959
+2025-04-09 23:43:35,865 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/tianya7981/jiekou/refs/heads/main/野火959
+2025-04-09 23:43:35,865 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/big-mouth-cn/tv/main/iptv-ok.m3u
+2025-04-09 23:43:37,572 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/big-mouth-cn/tv/main/iptv-ok.m3u
+2025-04-09 23:43:37,573 - INFO - Parsing 2079 M3U lines
+2025-04-09 23:43:37,577 - INFO - Parsed 18 categories from M3U lines
+2025-04-09 23:43:37,578 - INFO - Fetching channels from https://codeberg.org/alfredisme/mytvsources/raw/branch/main/mylist-ipv6.m3u
+2025-04-09 23:43:38,222 - INFO - Successfully fetched channels from https://codeberg.org/alfredisme/mytvsources/raw/branch/main/mylist-ipv6.m3u
+2025-04-09 23:43:38,223 - INFO - Parsing 345 M3U lines
+2025-04-09 23:43:38,224 - INFO - Parsed 21 categories from M3U lines
+2025-04-09 23:43:38,224 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u
+2025-04-09 23:43:40,517 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/lalifeier/IPTV/main/m3u/IPTV.m3u
+2025-04-09 23:43:40,523 - INFO - Parsing 22690 M3U lines
+2025-04-09 23:43:40,581 - INFO - Parsed 100 categories from M3U lines
+2025-04-09 23:43:40,582 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/wwb521/live/main/tv.m3u
+2025-04-09 23:43:42,198 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/wwb521/live/main/tv.m3u
+2025-04-09 23:43:42,199 - INFO - Parsing 5451 M3U lines
+2025-04-09 23:43:42,208 - INFO - Parsed 11 categories from M3U lines
+2025-04-09 23:43:42,208 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.m3u
+2025-04-09 23:43:43,604 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/ssili126/tv/main/itvlist.m3u
+2025-04-09 23:43:43,604 - INFO - Parsing 549 M3U lines
+2025-04-09 23:43:43,605 - INFO - Parsed 3 categories from M3U lines
+2025-04-09 23:43:43,605 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/l.txt
+2025-04-09 23:43:44,399 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/l.txt
+2025-04-09 23:43:44,400 - INFO - Parsing 785 TXT lines
+2025-04-09 23:43:44,402 - INFO - Parsed 11 categories from TXT lines
+2025-04-09 23:43:44,402 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/kk.txt
+2025-04-09 23:43:45,400 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/asdjkl6/tv/tv/.m3u/整套直播源/测试/整套直播源/kk.txt
+2025-04-09 23:43:45,400 - INFO - Parsing 915 TXT lines
+2025-04-09 23:43:45,403 - INFO - Parsed 14 categories from TXT lines
+2025-04-09 23:43:45,403 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u
+2025-04-09 23:43:46,408 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/suxuang/myIPTV/main/ipv6.m3u
+2025-04-09 23:43:46,408 - INFO - Parsing 1793 M3U lines
+2025-04-09 23:43:46,412 - INFO - Parsed 20 categories from M3U lines
+2025-04-09 23:43:46,412 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u
+2025-04-09 23:43:48,030 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/iptv-api/gd/output/result.m3u
+2025-04-09 23:43:48,032 - INFO - Parsing 5201 M3U lines
+2025-04-09 23:43:48,045 - INFO - Parsed 41 categories from M3U lines
+2025-04-09 23:43:48,045 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u
+2025-04-09 23:43:49,988 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/yuanzl77/IPTV/main/live.m3u
+2025-04-09 23:43:49,996 - INFO - Parsing 27491 M3U lines
+2025-04-09 23:43:50,059 - INFO - Parsed 7 categories from M3U lines
+2025-04-09 23:43:50,060 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u
+2025-04-09 23:43:50,898 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u
+2025-04-09 23:43:50,898 - INFO - Parsing 261 M3U lines
+2025-04-09 23:43:50,899 - INFO - Parsed 4 categories from M3U lines
+2025-04-09 23:43:50,899 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/APTV.m3u
+2025-04-09 23:43:52,035 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/YueChan/Live/refs/heads/main/APTV.m3u
+2025-04-09 23:43:52,035 - INFO - Parsing 169 M3U lines
+2025-04-09 23:43:52,036 - INFO - Parsed 4 categories from M3U lines
+2025-04-09 23:43:52,036 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u
+2025-04-09 23:43:53,203 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u
+2025-04-09 23:43:53,203 - INFO - Parsing 222 M3U lines
+2025-04-09 23:43:53,204 - INFO - Parsed 4 categories from M3U lines
+2025-04-09 23:43:53,205 - INFO - Fetching channels from https://live.zbds.top/tv/iptv6.txt
+2025-04-09 23:43:54,043 - INFO - Successfully fetched channels from https://live.zbds.top/tv/iptv6.txt
+2025-04-09 23:43:54,043 - INFO - Parsing 67 TXT lines
+2025-04-09 23:43:54,043 - INFO - Parsed 7 categories from TXT lines
+2025-04-09 23:43:54,044 - INFO - Fetching channels from http://xhztv.top/new.txt
+2025-04-09 23:43:54,421 - INFO - Successfully fetched channels from http://xhztv.top/new.txt
+2025-04-09 23:43:54,421 - INFO - Parsing 3295 TXT lines
+2025-04-09 23:43:54,429 - INFO - Parsed 42 categories from TXT lines
+2025-04-09 23:43:54,429 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/TV/gd/output/result.txt
+2025-04-09 23:43:55,931 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/TV/gd/output/result.txt
+2025-04-09 23:43:55,932 - INFO - Parsing 2681 TXT lines
+2025-04-09 23:43:55,940 - INFO - Parsed 41 categories from TXT lines
+2025-04-09 23:43:55,940 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/hd.txt
+2025-04-09 23:43:57,619 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/hd.txt
+2025-04-09 23:43:57,620 - INFO - Parsing 3147 TXT lines
+2025-04-09 23:43:57,628 - INFO - Parsed 39 categories from TXT lines
+2025-04-09 23:43:57,629 - INFO - Fetching channels from https://live.fanmingming.cn/tv/m3u/ipv6.m3u
+2025-04-09 23:43:57,972 - INFO - Successfully fetched channels from https://live.fanmingming.cn/tv/m3u/ipv6.m3u
+2025-04-09 23:43:58,106 - INFO - Parsing 206 M3U lines
+2025-04-09 23:43:58,107 - INFO - Parsed 5 categories from M3U lines
+2025-04-09 23:43:58,107 - INFO - Fetching channels from https://live.zhoujie218.top/tv/iptv6.txt
+2025-04-09 23:43:59,336 - INFO - Successfully fetched channels from https://live.zhoujie218.top/tv/iptv6.txt
+2025-04-09 23:43:59,337 - INFO - Parsing 67 TXT lines
+2025-04-09 23:43:59,337 - INFO - Parsed 7 categories from TXT lines
+2025-04-09 23:43:59,337 - INFO - Fetching channels from https://cdn.jsdelivr.net/gh/YueChan/live@main/IPTV.m3u
+2025-04-09 23:43:59,356 - INFO - Successfully fetched channels from https://cdn.jsdelivr.net/gh/YueChan/live@main/IPTV.m3u
+2025-04-09 23:43:59,367 - INFO - Parsing 157 M3U lines
+2025-04-09 23:43:59,367 - INFO - Parsed 4 categories from M3U lines
+2025-04-09 23:43:59,367 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.txt
+2025-04-09 23:44:00,764 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.txt
+2025-04-09 23:44:00,764 - INFO - Parsing 3 TXT lines
+2025-04-09 23:44:00,764 - INFO - Parsed 3 categories from TXT lines
+2025-04-09 23:44:00,765 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/PizazzGY/TVBox_warehouse/main/live.txt
+2025-04-09 23:44:01,888 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/PizazzGY/TVBox_warehouse/main/live.txt
+2025-04-09 23:44:01,888 - INFO - Parsing 17 TXT lines
+2025-04-09 23:44:01,888 - INFO - Parsed 1 categories from TXT lines
+2025-04-09 23:44:01,888 - INFO - Fetching channels from https://fm1077.serv00.net/SmartTV.m3u
+2025-04-09 23:44:02,618 - INFO - Successfully fetched channels from https://fm1077.serv00.net/SmartTV.m3u
+2025-04-09 23:44:02,707 - INFO - Parsing 1126 M3U lines
+2025-04-09 23:44:02,709 - INFO - Parsed 17 categories from M3U lines
+2025-04-09 23:44:02,709 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/joevess/IPTV/main/home.m3u8
+2025-04-09 23:44:03,832 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/joevess/IPTV/main/home.m3u8
+2025-04-09 23:44:03,832 - INFO - Fetching channels from https://tv.youdu.fan:666/live/
+2025-04-09 23:44:05,207 - INFO - Successfully fetched channels from https://tv.youdu.fan:666/live/
+2025-04-09 23:44:05,207 - INFO - Fetching channels from https://m3u.ibert.me/txt/o_cn.txt
+2025-04-09 23:44:05,408 - INFO - Successfully fetched channels from https://m3u.ibert.me/txt/o_cn.txt
+2025-04-09 23:44:05,408 - INFO - Parsing 198 TXT lines
+2025-04-09 23:44:05,408 - INFO - Parsed 25 categories from TXT lines
+2025-04-09 23:44:05,409 - INFO - Fetching channels from https://m3u.ibert.me/txt/j_iptv.txt
+2025-04-09 23:44:05,420 - INFO - Successfully fetched channels from https://m3u.ibert.me/txt/j_iptv.txt
+2025-04-09 23:44:05,420 - INFO - Parsing 0 TXT lines
+2025-04-09 23:44:05,420 - INFO - Parsed 0 categories from TXT lines
+2025-04-09 23:44:05,420 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/xzw832/cmys/main/S_CCTV.txt
+2025-04-09 23:44:06,229 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/xzw832/cmys/main/S_CCTV.txt
+2025-04-09 23:44:06,229 - INFO - Parsing 8 TXT lines
+2025-04-09 23:44:06,229 - INFO - Parsed 0 categories from TXT lines
+2025-04-09 23:44:06,230 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/xzw832/cmys/main/S_weishi.txt
+2025-04-09 23:44:07,029 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/xzw832/cmys/main/S_weishi.txt
+2025-04-09 23:44:07,029 - INFO - Parsing 17 TXT lines
+2025-04-09 23:44:07,029 - INFO - Parsed 0 categories from TXT lines
+2025-04-09 23:44:07,029 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/BurningC4/Chinese-IPTV/master/TV-IPV4.m3u
+2025-04-09 23:44:08,172 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/BurningC4/Chinese-IPTV/master/TV-IPV4.m3u
+2025-04-09 23:44:08,172 - INFO - Parsing 175 M3U lines
+2025-04-09 23:44:08,172 - INFO - Parsed 0 categories from M3U lines
+2025-04-09 23:44:08,173 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/joevess/IPTV/main/m3u/iptv.m3u
+2025-04-09 23:44:09,377 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/joevess/IPTV/main/m3u/iptv.m3u
+2025-04-09 23:44:09,377 - INFO - Parsing 1 M3U lines
+2025-04-09 23:44:09,377 - INFO - Parsed 0 categories from M3U lines
+2025-04-09 23:44:09,378 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPV6.m3u
+2025-04-09 23:44:10,177 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/Ftindy/IPTV-URL/main/IPV6.m3u
+2025-04-09 23:44:10,177 - INFO - Parsing 185 M3U lines
+2025-04-09 23:44:10,178 - INFO - Parsed 1 categories from M3U lines
+2025-04-09 23:44:10,178 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u
+2025-04-09 23:44:10,981 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/YanG-1989/m3u/main/Gather.m3u
+2025-04-09 23:44:10,981 - INFO - Parsing 261 M3U lines
+2025-04-09 23:44:10,982 - INFO - Parsed 4 categories from M3U lines
+2025-04-09 23:44:10,982 - INFO - Fetching channels from https://iptv.b2og.com/txt/fmml_ipv6.txt
+2025-04-09 23:44:11,754 - INFO - Successfully fetched channels from https://iptv.b2og.com/txt/fmml_ipv6.txt
+2025-04-09 23:44:11,754 - INFO - Parsing 111 TXT lines
+2025-04-09 23:44:11,755 - INFO - Parsed 5 categories from TXT lines
+2025-04-09 23:44:11,755 - INFO - Fetching channels from http://xhztv.top/zbc.txt
+2025-04-09 23:44:12,150 - INFO - Successfully fetched channels from http://xhztv.top/zbc.txt
+2025-04-09 23:44:12,150 - INFO - Parsing 1189 TXT lines
+2025-04-09 23:44:12,153 - INFO - Parsed 14 categories from TXT lines
+2025-04-09 23:44:12,153 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output_simple.txt
+2025-04-09 23:44:13,776 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output_simple.txt
+2025-04-09 23:44:13,777 - INFO - Parsing 4256 TXT lines
+2025-04-09 23:44:13,788 - INFO - Parsed 24 categories from TXT lines
+2025-04-09 23:44:13,788 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/SPX372928/MyIPTV/master/黑龙江PLTV移动CDN版.txt
+2025-04-09 23:44:14,899 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/SPX372928/MyIPTV/master/黑龙江PLTV移动CDN版.txt
+2025-04-09 23:44:14,899 - INFO - Parsing 210 TXT lines
+2025-04-09 23:44:14,899 - INFO - Parsed 0 categories from TXT lines
+2025-04-09 23:44:14,899 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt
+2025-04-09 23:44:16,856 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt
+2025-04-09 23:44:16,859 - INFO - Parsing 11660 TXT lines
+2025-04-09 23:44:16,883 - INFO - Parsed 16 categories from TXT lines
+2025-04-09 23:44:16,884 - INFO - Fetching channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.m3u
+2025-04-09 23:44:19,020 - INFO - Successfully fetched channels from https://gh.tryxd.cn/https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.m3u
+2025-04-09 23:44:19,031 - INFO - Parsing 41679 M3U lines
+2025-04-09 23:44:19,109 - INFO - Parsed 69 categories from M3U lines
+2025-04-09 23:44:19,110 - INFO - Fetching channels from https://live.zhoujie218.top/tv/iptv4.txt
+2025-04-09 23:44:20,335 - INFO - Successfully fetched channels from https://live.zhoujie218.top/tv/iptv4.txt
+2025-04-09 23:44:20,335 - INFO - Parsing 2572 TXT lines
+2025-04-09 23:44:20,342 - INFO - Parsed 17 categories from TXT lines
+2025-04-09 23:44:20,343 - INFO - Matching channels
