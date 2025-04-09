@@ -79,7 +79,8 @@ def parse_m3u_lines(lines, response_time):
     for line in lines:
         line = line.strip()
         if line.startswith("#EXTINF"):
-            match = re.search(r'group-title="(.*?)" tvg-logo="(.*?)"?,(.*)', line)
+            # 优化正则表达式，处理更多格式
+            match = re.search(r'group-title="(.*?)"(?: tvg-logo="(.*?)")?,(.*)', line)
             if match:
                 current_category = match.group(1).strip()
                 logo_url = match.group(2).strip() if match.group(2) else None
