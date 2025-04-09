@@ -80,14 +80,19 @@ def parse_m3u_lines(lines, response_time):
         line = line.strip()
         if line.startswith("#EXTINF"):
             # 优化正则表达式，处理更多格式
-            match = re.search(r'group-title="(.*?)"(?: tvg-logo="(.*?)")?,(.*)', line)
-            if match:
-                current_category = match.group(1).strip()
-                logo_url = match.group(2).strip() if match.group(2) else None
-                channel_name = match.group(3).strip()
-                if channel_name and channel_name.startswith("CCTV"):  # 判断频道名称是否存在且以CCTV开头
-                    channel_name = clean_channel_name(channel_name)  # 频道名称数据清洗
+            category_match = re.search(r'group-title="(.*?)"', line)
+            logo_match = re.search(r'tvg-logo="(.*?)"', line)
+            name_match = re.search(r',(.*)$', line)
 
+            if category_match:
+                current_category = category_match.group(1).strip()
+            logo_url = logo_match.group(1).strip() if logo_match else None
+            channel_name = name_match.group(1).strip() if name_match else None
+
+            if channel_name and channel_name.startswith("CCTV"):  # 判断频道名称是否存在且以CCTV开头
+                channel_name = clean_channel_name(channel_name)  # 频道名称数据清洗
+
+            if current_category and channel_name:
                 if current_category not in channels:
                     channels[current_category] = []
         elif line and not line.startswith("#"):
