@@ -21,7 +21,12 @@ def parse_template(template_file):
     :param template_file: 模板文件路径
     :return: 包含频道分类和频道名称的有序字典
     """
-    pass  # function body is omitted
+    try:
+        # 这里需要实现具体的解析逻辑
+        pass
+    except Exception as e:
+        logging.error(f"Error parsing template file {template_file}: {e}")
+        return OrderedDict()
 
 def clean_channel_name(channel_name):
     """
@@ -29,7 +34,12 @@ def clean_channel_name(channel_name):
     :param channel_name: 原始频道名称
     :return: 清洗后的频道名称
     """
-    pass  # function body is omitted  # 转换为大写
+    try:
+        # 这里需要实现具体的清洗逻辑
+        pass
+    except Exception as e:
+        logging.error(f"Error cleaning channel name {channel_name}: {e}")
+        return channel_name
 
 def fetch_channels(url):
     """
@@ -126,7 +136,12 @@ def match_channels(template_channels, all_channels):
     :param all_channels: 所有抓取到的频道信息
     :return: 匹配后的频道信息
     """
-    pass  # function body is omitted
+    try:
+        # 这里需要实现具体的匹配逻辑
+        pass
+    except Exception as e:
+        logging.error(f"Error matching channels: {e}")
+        return OrderedDict()
 
 def filter_source_urls(template_file):
     """
@@ -163,7 +178,12 @@ def is_ipv6(url):
     :param url: 频道URL
     :return: 如果是IPv6地址返回True，否则返回False
     """
-    pass  # function body is omitted
+    try:
+        # 这里需要实现具体的判断逻辑
+        pass
+    except Exception as e:
+        logging.error(f"Error checking if URL {url} is IPv6: {e}")
+        return False
 
 def updateChannelUrlsM3U(channels, template_channels):
     """
@@ -171,6 +191,9 @@ def updateChannelUrlsM3U(channels, template_channels):
     :param channels: 匹配后的频道信息
     :param template_channels: 模板频道信息
     """
+    if channels is None:
+        logging.error("Channels is None. Skipping update.")
+        return
     written_urls = set()
     with open(os.path.join('output', 'live_ipv6.m3u'), 'w', encoding='utf-8') as f_m3u_ipv6, \
             open(os.path.join('output', 'live_ipv6.txt'), 'w', encoding='utf-8') as f_txt_ipv6, \
@@ -219,7 +242,12 @@ def add_url_suffix(url, index, total_urls, ip_version):
     :param ip_version: IP版本
     :return: 添加后缀后的URL
     """
-    pass  # function body is omitted
+    try:
+        # 这里需要实现具体的添加后缀逻辑
+        pass
+    except Exception as e:
+        logging.error(f"Error adding URL suffix to {url}: {e}")
+        return url
 
 def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url, response_time, logo_url):
     """
