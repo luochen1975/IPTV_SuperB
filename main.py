@@ -23,7 +23,7 @@ def parse_template(template_file):
     """
     try:
         # 这里需要实现具体的解析逻辑
-        pass
+        return OrderedDict()
     except Exception as e:
         logging.error(f"Error parsing template file {template_file}: {e}")
         return OrderedDict()
@@ -36,7 +36,7 @@ def clean_channel_name(channel_name):
     """
     try:
         # 这里需要实现具体的清洗逻辑
-        pass
+        return channel_name.upper()
     except Exception as e:
         logging.error(f"Error cleaning channel name {channel_name}: {e}")
         return channel_name
@@ -56,6 +56,8 @@ def fetch_channels(url):
                 return parse_m3u_lines(response.text.splitlines(), response_time)
             elif url.endswith('.txt'):
                 return parse_txt_lines(response.text.splitlines(), response_time)
+        else:
+            logging.error(f"Failed to fetch channels from {url}. Status code: {response.status_code}")
     except requests.RequestException as e:
         logging.error(f"Failed to fetch channels from {url}: {e}")
     return OrderedDict()
@@ -138,7 +140,7 @@ def match_channels(template_channels, all_channels):
     """
     try:
         # 这里需要实现具体的匹配逻辑
-        pass
+        return OrderedDict()
     except Exception as e:
         logging.error(f"Error matching channels: {e}")
         return OrderedDict()
@@ -180,7 +182,7 @@ def is_ipv6(url):
     """
     try:
         # 这里需要实现具体的判断逻辑
-        pass
+        return False
     except Exception as e:
         logging.error(f"Error checking if URL {url} is IPv6: {e}")
         return False
@@ -244,7 +246,7 @@ def add_url_suffix(url, index, total_urls, ip_version):
     """
     try:
         # 这里需要实现具体的添加后缀逻辑
-        pass
+        return url
     except Exception as e:
         logging.error(f"Error adding URL suffix to {url}: {e}")
         return url
