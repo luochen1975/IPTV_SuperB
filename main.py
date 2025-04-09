@@ -21,23 +21,7 @@ def parse_template(template_file):
     :param template_file: 模板文件路径
     :return: 包含频道分类和频道名称的有序字典
     """
-    template_channels = OrderedDict()
-    current_category = None
-
-    with open(template_file, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if line and not line.startswith("#"):
-                if "#genre#" in line:
-                    # 提取当前类别
-                    current_category = line.split(",")[0].strip()
-                    template_channels[current_category] = []
-                elif current_category:
-                    # 提取频道名称并加入当前类别中
-                    channel_name = line.split(",")[0].strip()
-                    template_channels[current_category].append(channel_name)
-
-    return template_channels
+    pass  # function body is omitted
 
 def clean_channel_name(channel_name):
     """
@@ -45,10 +29,7 @@ def clean_channel_name(channel_name):
     :param channel_name: 原始频道名称
     :return: 清洗后的频道名称
     """
-    cleaned_name = re.sub(r'[$「」-]', '', channel_name)  # 去掉中括号、«», 和'-'字符
-    cleaned_name = re.sub(r'\s+', '', cleaned_name)  # 去掉所有空白字符
-    cleaned_name = re.sub(r'(\D*)(\d+)', lambda m: m.group(1) + str(int(m.group(2))), cleaned_name)  # 将数字前面的部分保留，数字转换为整数
-    return cleaned_name.upper()  # 转换为大写
+    pass  # function body is omitted  # 转换为大写
 
 def fetch_channels(url):
     """
@@ -56,32 +37,18 @@ def fetch_channels(url):
     :param url: 直播源URL
     :return: 包含频道信息的有序字典
     """
-    channels = OrderedDict()
-
     try:
         start_time = time.time()
-        response = requests.get(url, timeout=5)
+        response = requests.get(url, timeout=10)
         response_time = time.time() - start_time
-        response.raise_for_status()
-        response.encoding = 'utf-8'
-        lines = response.text.split("\n")
-        current_category = None
-        is_m3u = any(line.startswith("#EXTINF") for line in lines[:15])
-        source_type = "m3u" if is_m3u else "txt"
-        logging.info(f"url: {url} 成功，判断为{source_type}格式，响应时间: {response_time:.2f} 秒")
-
-        if is_m3u:
-            channels.update(parse_m3u_lines(lines, response_time))
-        else:
-            channels.update(parse_txt_lines(lines, response_time))
-
-        if channels:
-            categories = ", ".join(channels.keys())
-            logging.info(f"url: {url} 成功，包含频道分类: {categories}")
+        if response.status_code == 200:
+            if url.endswith('.m3u'):
+                return parse_m3u_lines(response.text.splitlines(), response_time)
+            elif url.endswith('.txt'):
+                return parse_txt_lines(response.text.splitlines(), response_time)
     except requests.RequestException as e:
-        logging.error(f"url: {url} 失败❌, Error: {e}")
-
-    return channels
+        logging.error(f"Failed to fetch channels from {url}: {e}")
+    return OrderedDict()
 
 def parse_m3u_lines(lines, response_time):
     """
@@ -159,18 +126,7 @@ def match_channels(template_channels, all_channels):
     :param all_channels: 所有抓取到的频道信息
     :return: 匹配后的频道信息
     """
-    matched_channels = OrderedDict()
-
-    for category, channel_list in template_channels.items():
-        matched_channels[category] = OrderedDict()
-        for channel_name in channel_list:
-            for online_category, online_channel_list in all_channels.items():
-                for online_channel_name, online_channel_url, response_time, logo_url in online_channel_list:
-                    if channel_name == online_channel_name:
-                        # 匹配成功的频道信息加入结果中，同时记录响应时间和logo_url
-                        matched_channels[category].setdefault(channel_name, []).append((online_channel_url, response_time, logo_url))
-
-    return matched_channels
+    pass  # function body is omitted
 
 def filter_source_urls(template_file):
     """
@@ -196,11 +152,10 @@ def merge_channels(target, source):
     :param target: 目标字典
     :param source: 源字典
     """
-    for category, channel_list in source.items():
-        if category in target:
-            target[category].extend(channel_list)
-        else:
-            target[category] = channel_list
+    for category, channels in source.items():
+        if category not in target:
+            target[category] = []
+        target[category].extend(channels)
 
 def is_ipv6(url):
     """
@@ -208,7 +163,7 @@ def is_ipv6(url):
     :param url: 频道URL
     :return: 如果是IPv6地址返回True，否则返回False
     """
-    return re.match(r'^http:\/\/\[[0-9a-fA-F:]+\]', url) is not None
+    pass  # function body is omitted
 
 def updateChannelUrlsM3U(channels, template_channels):
     """
@@ -216,57 +171,30 @@ def updateChannelUrlsM3U(channels, template_channels):
     :param channels: 匹配后的频道信息
     :param template_channels: 模板频道信息
     """
-    written_urls_ipv4 = set()
-    written_urls_ipv6 = set()
-
-    current_date = datetime.now().strftime("%Y-%m-%d")
-    for group in config.announcements:
-        for announcement in group['entries']:
-            if announcement['name'] is None:
-                announcement['name'] = current_date
-
-    output_path = 'output'
-    with open(os.path.join(output_path, "live_ipv4.m3u"), "w", encoding="utf-8") as f_m3u_ipv4, \
-            open(os.path.join(output_path, "live_ipv4.txt"), "w", encoding="utf-8") as f_txt_ipv4, \
-            open(os.path.join(output_path, "live_ipv6.m3u"), "w", encoding="utf-8") as f_m3u_ipv6, \
-            open(os.path.join(output_path, "live_ipv6.txt"), "w", encoding="utf-8") as f_txt_ipv6:
-
-        f_m3u_ipv4.write(f"""#EXTM3U x-tvg-url={",".join(f'"{epg_url}"' for epg_url in config.epg_urls)}\n""")
-        f_m3u_ipv6.write(f"""#EXTM3U x-tvg-url={",".join(f'"{epg_url}"' for epg_url in config.epg_urls)}\n""")
-
-        for group in config.announcements:
-            f_txt_ipv4.write(f"{group['channel']},#genre#\n")
-            f_txt_ipv6.write(f"{group['channel']},#genre#\n")
-            for announcement in group['entries']:
-                f_m3u_ipv4.write(f"""#EXTINF:-1 tvg-id="1" tvg-name="{announcement['name']}" tvg-logo="{announcement['logo']}" group-title="{group['channel']}",{announcement['name']}\n""")
-                f_m3u_ipv4.write(f"{announcement['url']}\n")
-                f_txt_ipv4.write(f"{announcement['name']},{announcement['url']}\n")
-                f_m3u_ipv6.write(f"""#EXTINF:-1 tvg-id="1" tvg-name="{announcement['name']}" tvg-logo="{announcement['logo']}" group-title="{group['channel']}",{announcement['name']}\n""")
-                f_m3u_ipv6.write(f"{announcement['url']}\n")
-                f_txt_ipv6.write(f"{announcement['name']},{announcement['url']}\n")
-
-        for category, channel_list in template_channels.items():
-            f_txt_ipv4.write(f"{category},#genre#\n")
+    written_urls = set()
+    with open(os.path.join('output', 'live_ipv6.m3u'), 'w', encoding='utf-8') as f_m3u_ipv6, \
+            open(os.path.join('output', 'live_ipv6.txt'), 'w', encoding='utf-8') as f_txt_ipv6, \
+            open(os.path.join('output', 'live_ipv4.m3u'), 'w', encoding='utf-8') as f_m3u_ipv4, \
+            open(os.path.join('output', 'live_ipv4.txt'), 'w', encoding='utf-8') as f_txt_ipv4:
+        for category, channel_list in channels.items():
+            f_m3u_ipv6.write(f"#EXTM3U group-title=\"{category}\"\n")
             f_txt_ipv6.write(f"{category},#genre#\n")
-            if category in channels:
-                for channel_name in channel_list:
-                    if channel_name in channels[category]:
-                        sorted_urls_ipv4 = [url for url in sort_and_filter_urls(channels[category][channel_name], written_urls_ipv4) if not is_ipv6(url[0])]
-                        sorted_urls_ipv6 = [url for url in sort_and_filter_urls(channels[category][channel_name], written_urls_ipv6) if is_ipv6(url[0])]
+            f_m3u_ipv4.write(f"#EXTM3U group-title=\"{category}\"\n")
+            f_txt_ipv4.write(f"{category},#genre#\n")
+            channel_dict = OrderedDict()
+            for channel_name, channel_url, response_time, logo_url in channel_list:
+                if channel_name not in channel_dict:
+                    channel_dict[channel_name] = []
+                channel_dict[channel_name].append((channel_url, response_time, logo_url))
 
-                        total_urls_ipv4 = len(sorted_urls_ipv4)
-                        total_urls_ipv6 = len(sorted_urls_ipv6)
-
-                        for index, (url, response_time, logo_url) in enumerate(sorted_urls_ipv4, start=1):
-                            new_url = add_url_suffix(url, index, total_urls_ipv4, "IPV4")
-                            write_to_files(f_m3u_ipv4, f_txt_ipv4, category, channel_name, index, new_url, response_time, logo_url)
-
-                        for index, (url, response_time, logo_url) in enumerate(sorted_urls_ipv6, start=1):
-                            new_url = add_url_suffix(url, index, total_urls_ipv6, "IPV6")
-                            write_to_files(f_m3u_ipv6, f_txt_ipv6, category, channel_name, index, new_url, response_time, logo_url)
-
-        f_txt_ipv4.write("\n")
-        f_txt_ipv6.write("\n")
+            for channel_name, urls in channel_dict.items():
+                sorted_urls = sort_and_filter_urls(urls, written_urls)
+                total_urls = len(sorted_urls)
+                for index, (url, response_time, logo_url) in enumerate(sorted_urls, start=1):
+                    if is_ipv6(url):
+                        write_to_files(f_m3u_ipv6, f_txt_ipv6, category, channel_name, index, url, response_time, logo_url)
+                    else:
+                        write_to_files(f_m3u_ipv4, f_txt_ipv4, category, channel_name, index, url, response_time, logo_url)
 
 def sort_and_filter_urls(urls, written_urls):
     """
@@ -291,9 +219,7 @@ def add_url_suffix(url, index, total_urls, ip_version):
     :param ip_version: IP版本
     :return: 添加后缀后的URL
     """
-    suffix = f"${ip_version}" if total_urls == 1 else f"${ip_version}•线路{index}"
-    base_url = url.split('$', 1)[0] if '$' in url else url
-    return f"{base_url}{suffix}"
+    pass  # function body is omitted
 
 def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url, response_time, logo_url):
     """
@@ -307,11 +233,10 @@ def write_to_files(f_m3u, f_txt, category, channel_name, index, new_url, respons
     :param response_time: 响应时间
     :param logo_url: 图标URL
     """
-    if not logo_url:
-        logo_url = f"https://gitee.com/IIII-9306/PAV/raw/master/logos/{channel_name}.png"
-    f_m3u.write(f"#EXTINF:-1 tvg-id=\"{index}\" tvg-name=\"{channel_name}\" tvg-logo=\"{logo_url}\" group-title=\"{category}\" tvg-response-time=\"{response_time:.2f}\",{channel_name}\n")
-    f_m3u.write(new_url + "\n")
-    f_txt.write(f"{channel_name},{new_url},{response_time:.2f},{logo_url}\n")
+    logo_url = logo_url if logo_url else ""
+    f_m3u.write(f"#EXTINF:-1 group-title=\"{category}\" tvg-logo=\"{logo_url}\",{channel_name} - 线路{index}\n")
+    f_m3u.write(f"{new_url}\n")
+    f_txt.write(f"{channel_name},{new_url}\n")
 
 if __name__ == "__main__":
     template_file = "demo.txt"
