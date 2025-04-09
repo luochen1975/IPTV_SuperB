@@ -41,13 +41,10 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "Automated EPG update"
-            # 拉取远程仓库信息
-            git fetch
-            # 获取当前分支名
+            # 强制推送更改以防止冲突
             branch_name=$(git branch --show-current)
-            # 尝试将本地分支变基到远程分支
-            git rebase origin/$branch_name
-            # 推送更改到远程仓库
-            git push origin $branch_name
+            git fetch origin $branch_name
+            git reset --soft origin/$branch_name
+            git commit -m "Resolve conflicts and update EPG"
+            git push --force origin $branch_name
           fi
-    
