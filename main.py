@@ -23,6 +23,7 @@ def parse_template(template_file):
     """
     try:
         # 这里需要实现具体的解析逻辑
+        logging.info(f"Parsing template file {template_file}")
         return OrderedDict()
     except Exception as e:
         logging.error(f"Error parsing template file {template_file}: {e}")
@@ -48,10 +49,12 @@ def fetch_channels(url):
     :return: 包含频道信息的有序字典
     """
     try:
+        logging.info(f"Fetching channels from {url}")
         start_time = time.time()
         response = requests.get(url, timeout=10)
         response_time = time.time() - start_time
         if response.status_code == 200:
+            logging.info(f"Successfully fetched channels from {url}")
             if url.endswith('.m3u'):
                 return parse_m3u_lines(response.text.splitlines(), response_time)
             elif url.endswith('.txt'):
@@ -72,6 +75,7 @@ def parse_m3u_lines(lines, response_time):
     channels = OrderedDict()
     current_category = None
 
+    logging.info(f"Parsing {len(lines)} M3U lines")
     for line in lines:
         line = line.strip()
         if line.startswith("#EXTINF"):
@@ -91,6 +95,7 @@ def parse_m3u_lines(lines, response_time):
                 # 添加频道信息到当前类别中，同时记录响应时间和logo_url
                 channels[current_category].append((channel_name, channel_url, response_time, logo_url))
 
+    logging.info(f"Parsed {len(channels)} categories from M3U lines")
     return channels
 
 def parse_txt_lines(lines, response_time):
@@ -103,6 +108,7 @@ def parse_txt_lines(lines, response_time):
     channels = OrderedDict()
     current_category = None
 
+    logging.info(f"Parsing {len(lines)} TXT lines")
     for line in lines:
         line = line.strip()
         if "#genre#" in line:
@@ -129,6 +135,7 @@ def parse_txt_lines(lines, response_time):
                 logo_url = None
                 channels[current_category].append((line, '', response_time, logo_url))
 
+    logging.info(f"Parsed {len(channels)} categories from TXT lines")
     return channels
 
 def match_channels(template_channels, all_channels):
@@ -140,6 +147,7 @@ def match_channels(template_channels, all_channels):
     """
     try:
         # 这里需要实现具体的匹配逻辑
+        logging.info("Matching channels")
         return OrderedDict()
     except Exception as e:
         logging.error(f"Error matching channels: {e}")
@@ -153,6 +161,7 @@ def filter_source_urls(template_file):
     """
     template_channels = parse_template(template_file)
     source_urls = config.source_urls
+    logging.info(f"Source URLs: {source_urls}")
 
     all_channels = OrderedDict()
     for url in source_urls:
