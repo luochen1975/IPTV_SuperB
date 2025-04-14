@@ -97,7 +97,7 @@ announcements = [
     {
         "channel": "更新日期",
         "entries": [
-            {"name": None, "url": "https://gitee.com/IIII-9306/PAV/raw/master/Updatetime.mp4", "logo": "https://codeberg.org/alantang/photo/raw/branch/main/ChatGPTImage.png"}
+            {"name": None, "url": "https://codeberg.org/alantang/photo/raw/branch/main/ChatGPTImage.png", "logo": "https://codeberg.org/alantang/photo/raw/branch/main/ChatGPTImage.png"}
         ]
     }
 ]
