@@ -27,7 +27,6 @@ source_urls = [
     "https://gh.tryxd.cn/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
     "https://live.zbds.top/tv/iptv6.txt",
     "http://xhztv.top/new.txt",
-    "https://gh.tryxd.cn/https://raw.githubusercontent.com/Guovin/TV/gd/output/result.txt",
     "https://gh.tryxd.cn/https://raw.githubusercontent.com/vbskycn/iptv/master/tv/hd.txt",
     "https://live.fanmingming.cn/tv/m3u/ipv6.m3u",
     "https://live.zhoujie218.top/tv/iptv6.txt",
