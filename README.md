@@ -1,4 +1,4 @@
-![IPTV](https://socialify.git.ci/alantang1977/IPTV_SuperB/image?description=1&descriptionEditable=IPTV%20%E7%9B%B4%E6%92%AD%E6%BA%90&forks=1&language=1&name=1&owner=1&pattern=Circuit%20Board&stargazers=1&theme=Auto)
+![IPTV](https://raw.githubusercontent.com/alantang1977/X/main/Pictures/Image320.png)
 
 
 # IPTV_SuperB
