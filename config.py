@@ -51,6 +51,7 @@ source_urls = [
     "https://raw.githubusercontent.com/qingwen07/awesome-iptv/main/tvbox_live_all.txt",
     "https://raw.githubusercontent.com/kimwang1978/collect-tv-txt/main/merged_output.m3u",
     "https://live.zhoujie218.top/tv/iptv4.txt"
+    "https://raw.githubusercontent.com/n3rddd/collect-tv-txt/refs/heads/main/others_output.txt"
     # 可以添加更多直播源URL
 ]
 
